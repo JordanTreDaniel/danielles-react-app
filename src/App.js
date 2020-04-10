@@ -7,8 +7,6 @@ import Lease from './pages/Lease'
 import Invest from './pages/Invest'
 import Sidebar from './components/SideBar';
 import "./App.css";
-import JordansPage from "./pages/JordansPage";
-
 
 import {
   BrowserRouter as Router,
@@ -24,19 +22,19 @@ function App() {
       {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/buy">
+        <Route exact path="/buy">
           <Buy />
         </Route>
-        <Route path="/sell">
+        <Route exact path="/sell">
           <Sell />
         </Route>
-        <Route path="/lease">
+        <Route exact path="/lease">
           <Lease />
         </Route>
-        <Route path="/invest">
+        <Route exact path="/invest">
           <Invest />
         </Route>
       </Switch>
