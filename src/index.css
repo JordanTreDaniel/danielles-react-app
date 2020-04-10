@@ -22,6 +22,7 @@ html {
 html,
 body {
   height: 100%;
+  width: 100%;
   text-align: center;
   background-image: linear-gradient(to right bottom, rgba(177, 46, 6, 0.699), rgba(40, 73, 180, 0.699)), url("https://scontent-dfw5-1.cdninstagram.com/vp/ac2a1c461d634c0d0f6275ef53ee8911/5D6E957F/t51.2885-15/e35/55864984_141896423530052_6188168065590667584_n.jpg?_nc_ht=scontent-dfw5-1.cdninstagram.com");
   background-size: contain;
