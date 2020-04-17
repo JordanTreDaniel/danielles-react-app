@@ -29,7 +29,7 @@ const NavBar = (props) => {
 	return (
 		<AppBar position="static" classes={{ root: classes.navBar }}>
 			<Toolbar classes={{ root: classes.toolBar }}>
-				<Link to="/home">
+				<Link to="/">
 					<Avatar src={DHRColorPng} />
 				</Link>
 				<Tabs aria-label="Navigation Bar" variant="scrollable">
