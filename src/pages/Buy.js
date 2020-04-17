@@ -1,17 +1,25 @@
-import React from "react";
-import Typography from '@material-ui/core/Typography';
+import React from 'react';
+import { Container } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
+import DHRRealLife from '../images/DHR-logo-real-life.jpg';
+import BasicInfoForm from '../components/BasicInfoForm';
+const useStyles = makeStyles((theme) => {
+	return {
+		homeGridContainer: {
+			height: '100%',
+			width: '100vw',
+			paddingTop: '1em'
+		}
+	};
+});
 
 function Buy() {
-    return (
-        <Typography
-            align="center"
-            color="primary"
-            display="block"
-            variant="h1"
-        >
-            Buy
-        </Typography>
-    );
+	const classes = useStyles();
+	return (
+		<Container classes={{ root: classes.homeGridContainer }} maxWidth="md">
+			<BasicInfoForm />
+		</Container>
+	);
 }
 
 export default Buy;
