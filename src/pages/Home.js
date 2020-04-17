@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme) => {
 function Home() {
 	const classes = useStyles();
 	return (
-		<Container classes={{ root: classes.homeGridContainer }}>
+		<Container classes={{ root: classes.homeGridContainer }} maxWidth="md">
 			<Paper variant="elevated" className={classes.introTextContainer}>
 				<img style={{ display: 'none' }} src={DHRRealLife} alt={'Beautiful Blue Home'} />
 				<div className={classes.overlay} />
