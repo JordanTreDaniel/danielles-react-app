@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => {
 		menuButton: {},
 		title: {},
 		navBar: {
-			position: 'absolute',
+			position: 'relative',
 			top: 0,
 			left: 0,
 			marginBottom: theme.spacing(2)
@@ -29,7 +29,9 @@ const NavBar = (props) => {
 	return (
 		<AppBar position="static" classes={{ root: classes.navBar }}>
 			<Toolbar classes={{ root: classes.toolBar }}>
-				<Avatar src={DHRColorPng} />
+				<Link to="/home">
+					<Avatar src={DHRColorPng} />
+				</Link>
 				<Tabs aria-label="Navigation Bar" variant="scrollable">
 					<Link className={classes.navLink} to="/buy">
 						<Tab label="Buy" />
