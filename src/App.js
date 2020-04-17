@@ -8,6 +8,7 @@ import Lease from './pages/Lease';
 import Invest from './pages/Invest';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import { makeStyles } from '@material-ui/core';
@@ -30,6 +31,7 @@ function App() {
 	const classes = useStyles();
 	return (
 		<Router>
+			<CssBaseline />
 			<NavBar classes={{ root: classes.navBar }} />
 			<Grid container classes={{ root: classes.App }}>
 				<Switch>
