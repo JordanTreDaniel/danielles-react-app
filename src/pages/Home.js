@@ -108,11 +108,11 @@ function Home() {
 				</Typography>
 			</Paper>
 			<Divider variant="fullwidth" classes={{ root: classes.divider }} />
-			<Grid container className={classes.pageLinksDiv} justify="center">
-				<PageCard cardTitle="Buy" />
-				<PageCard cardTitle="Sell" />
-				<PageCard cardTitle="Lease" />
-				<PageCard cardTitle="Invest" />
+			<Grid container className={classes.pageLinksDiv} justify="center" spacing={3}>
+				<PageCard pageName="Buy" />
+				<PageCard pageName="Sell" />
+				<PageCard pageName="Lease" />
+				<PageCard pageName="Invest" />
 			</Grid>
 		</Container>
 	);
