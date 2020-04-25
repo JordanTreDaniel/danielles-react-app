@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { AppBar, Toolbar, Tabs, Tab, Avatar } from '@material-ui/core';
+import { AppBar, Toolbar, Avatar, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';
 import DHRColorPng from '../images/DHR-color-logo.png';
 const useStyles = makeStyles((theme) => {
 	return {
-		menuButton: {},
+		menuButton: { color: theme.palette.common.white },
 		title: {},
 		navBar: {
 			position: 'relative',
@@ -32,20 +32,20 @@ const NavBar = (props) => {
 				<Link to="/">
 					<Avatar src={DHRColorPng} />
 				</Link>
-				<Tabs aria-label="Navigation Bar" variant="scrollable">
-					<Link className={classes.navLink} to="/buy">
-						<Tab label="Buy" />
-					</Link>
-					<Link className={classes.navLink} to="/sell">
-						<Tab label="Sell" />
-					</Link>
-					<Link className={classes.navLink} to="/lease">
-						<Tab label="Lease" />
-					</Link>
-					<Link className={classes.navLink} to="/invest">
-						<Tab label="Invest" />
-					</Link>
-				</Tabs>
+				<div aria-label="Navigation Bar" variant="scrollable">
+					<Button className={classes.menuButton} href="/buy">
+						Buy
+					</Button>
+					<Button className={classes.menuButton} href="/sell">
+						Sell
+					</Button>
+					<Button className={classes.menuButton} href="/lease">
+						Lease
+					</Button>
+					<Button className={classes.menuButton} href="/invest">
+						Invest
+					</Button>
+				</div>
 			</Toolbar>
 		</AppBar>
 	);
