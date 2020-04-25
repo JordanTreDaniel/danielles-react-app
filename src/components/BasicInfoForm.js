@@ -1,25 +1,6 @@
 import React, { useState } from 'react';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import { FormHelperText, Button, TextField, FormControlLabel, Checkbox, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-
-function Copyright() {
-	return (
-		<Typography variant="body2" color="textSecondary" align="center">
-			{'Copyright © '}
-			<Link color="inherit" href="https://material-ui.com/">
-				Your Website
-			</Link>{' '}
-			{new Date().getFullYear()}
-			{'.'}
-		</Typography>
-	);
-}
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
@@ -71,6 +52,7 @@ export default function BasicInfoForm() {
 						name="email"
 						autoComplete="email"
 					/>
+					<FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
 				</Grid>
 				<Grid item xs={12}>
 					<TextField
