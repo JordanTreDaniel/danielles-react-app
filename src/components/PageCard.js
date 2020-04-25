@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { Paper, Grid, Typography } from '@material-ui/core';
 
@@ -18,16 +17,14 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PageCard(props) {
 	const classes = useStyles();
-
+	const { handleClick } = props;
 	return (
 		<Grid lg={3} xs={6} item classes={{ root: classes.root }}>
-			<Link to={`/${props.pageName.toLowerCase()}`} className={classes.link}>
-				<Paper classes={{ root: classes.pageLinkBtn }}>
-					<Typography variant="h2" align="center">
-						{props.pageName}
-					</Typography>
-				</Paper>
-			</Link>
+			<Paper classes={{ root: classes.pageLinkBtn }} onClick={handleClick}>
+				<Typography variant="h2" align="center">
+					{props.pageName}
+				</Typography>
+			</Paper>
 		</Grid>
 	);
 }

@@ -78,8 +78,13 @@ const useStyles = makeStyles((theme) => {
 	};
 });
 
-function Home() {
+function Home(props) {
 	const classes = useStyles();
+	const infoThenNavigate = (path) => {
+		const { toggleBasicInfoDialog, history } = props;
+		toggleBasicInfoDialog(true);
+		history.push(path);
+	};
 	return (
 		<Container classes={{ root: classes.homeGridContainer }} maxWidth="md">
 			<Paper variant="elevated" className={classes.introTextContainer}>
@@ -109,10 +114,10 @@ function Home() {
 			</Paper>
 			<Divider variant="fullwidth" classes={{ root: classes.divider }} />
 			<Grid container className={classes.pageLinksDiv} justify="center" spacing={3}>
-				<PageCard pageName="Buy" />
-				<PageCard pageName="Sell" />
-				<PageCard pageName="Lease" />
-				<PageCard pageName="Invest" />
+				<PageCard pageName="Buy" handleClick={() => infoThenNavigate('/buy')} />
+				<PageCard pageName="Sell" handleClick={() => infoThenNavigate('/sell')} />
+				<PageCard pageName="Lease" handleClick={() => infoThenNavigate('/lease')} />
+				<PageCard pageName="Invest" handleClick={() => infoThenNavigate('/invest')} />
 			</Grid>
 		</Container>
 	);
