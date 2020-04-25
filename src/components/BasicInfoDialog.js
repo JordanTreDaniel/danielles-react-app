@@ -16,6 +16,12 @@ const useStyles = makeStyles((theme) => ({
 		flexDirection: 'column',
 		alignItems: 'center'
 	},
+	dialogTitle: {
+		fontWeight: theme.typography.fontWeightMedium,
+		textAlign: 'center',
+		backgroundColor: theme.palette.primary.main,
+		color: theme.palette.primary.contrastText
+	},
 	avatar: {
 		margin: theme.spacing(1),
 		backgroundColor: theme.palette.secondary.main
@@ -34,7 +40,7 @@ export default function BasicInfoDialog(props) {
 	const [ allowMarketing, setAllowMarketing ] = useState(true);
 	return (
 		<Dialog classes={{}} maxWidth="lg" onClose={() => props.toggleBasicInfoDialog(false)} open={true}>
-			<DialogTitle />
+			<DialogTitle className={classes.dialogTitle}>Nice to Meet You :)</DialogTitle>
 			<DialogContent>
 				<BasicInfoForm />
 			</DialogContent>

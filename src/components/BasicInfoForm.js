@@ -98,7 +98,7 @@ export default function BasicInfoForm() {
 					/>
 				</Grid>
 			</Grid>
-			<Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
+			<Button type="submit" variant="contained" color="primary" className={classes.submit}>
 				Enter My Info
 			</Button>
 		</form>
