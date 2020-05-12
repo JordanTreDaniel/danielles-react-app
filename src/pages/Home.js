@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography, Grid, Container, Avatar, Paper, Divider } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import DHRColorPng from '../images/DHR-color-logo.png';
 import DHRRealLife from '../images/DHR-logo-real-life.jpg';
 import PageCard from '../components/PageCard';
