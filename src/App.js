@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Grid } from '@material-ui/core';
 import logo from './logo.svg';
 import Home from './pages/Home';
@@ -13,6 +13,12 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
+import ReactGA from 'react-ga';
+
+function initializeReactGA() {
+	ReactGA.initialize('UA-166594032-1');
+	ReactGA.pageview('/home');
+}
 
 const useStyles = makeStyles((theme) => {
 	return {
@@ -31,7 +37,10 @@ const useStyles = makeStyles((theme) => {
 function App() {
 	const classes = useStyles();
 	const [ basicInfoDialogOpen, toggleBasicInfoDialog ] = useState(false);
-
+	useEffect(() => {
+		console.log('only once?');
+		initializeReactGA();
+	}, []);
 	return (
 		<Router>
 			<CssBaseline />
